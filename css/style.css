@@ -1,0 +1,73 @@
+* {
+    box-sizing: border-box;
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(../fonts/SourceSansPro-Regular.otf);
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url(../fonts/SourceSansPro-Bold.otf);
+    font-weight: bold;
+}
+
+body {
+    font-family: "Source Sans Pro";
+}
+
+/* CABECALHO */
+.cabecalho {
+    background-color: #fff;
+    padding: 15px;
+}
+.logo {
+    height: 53px;
+    width: 120px;
+    display: block;
+}
+
+/* MENU */
+.menu-principal__btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -999em;
+    background-color: #fff;
+    background-image: url(../img/menuprincipal-btn-bg.png);
+    background-repeat: no-repeat;
+    background-position: -48px 7px;
+    border-color: #c4c4c4;
+    border-style: solid;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.menu-principal__btn--fechar {
+    background-position: 5px 5px;
+}
+
+/* MENU LISTA */
+.menu-principal__lista {
+    /* Fazendo isso pois o ul tem um padding na lista */
+    padding: 0;
+}
+.menu-principal__lista li {
+    list-style: none;
+}
+.menu-principal__item {
+    text-decoration: none;
+    font-weight: bold;
+    color: #343434;
+    /* Tive que colocar display block pois os itens são inline, ai eu não consigo modificar as margens */
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.menu-principal__item--atual {
+    color: #f44242;
+}
