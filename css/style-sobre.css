@@ -1,0 +1,20 @@
+.pagina-cabecalho {
+    background-color: #dd3f3f;
+    color: #fff;
+    padding: 40px 0;
+    background-image: url('../img/cabecalho-pagina-bg.jpg');
+    background-attachment: fixed;
+}
+.pagina-cabecalho__titulo {
+    text-align: center;
+    text-transform: uppercase;
+}
+.pagina-cabecalho__titulo::after {
+    content: '';
+    display: block;
+    height: 3px;
+    width: 50px;
+    background-color: #fff;
+    margin: 0 auto;
+    margin-top: 20px;
+}

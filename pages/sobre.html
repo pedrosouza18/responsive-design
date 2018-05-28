@@ -6,25 +6,33 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Sobre nós</title>
+  <link rel="stylesheet" href="../css/normalize.css">
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style-sobre.css">
 </head>
 
 <body>
-  <header>
-    <a href="index.html">Responsive Design</a>
-    <nav>
-      <button type="button">Abrir/fechar menu</button>
-      <ul>
+  <header class="cabecalho">
+    <!-- Fiz o logo assim pois ele é mais semantico, o texto precisa ser fornecido sempre -->
+    <!-- O atributo role da mais significado para o meu logo -->
+    <a class="logo" role="logo" href="index.html">
+      <img src="../img/logotipo-preto.png" alt="Logotipo Responsive Design">
+    </a>
+    <!-- <h1 class="logo">Responsive Design</h1> -->
+    <nav class="menu-principal">
+      <button type="button" class="menu-principal__btn">Abrir/fechar menu</button>
+      <ul class="menu-principal__lista">
         <li>
-          <a href="index.html">Home</a>
+          <a class="menu-principal__item" href="index.html">Home</a>
         </li>
         <li>
-          <a href="sobre.html">Sobre nós</a>
+          <a class="menu-principal__item menu-principal__item--atual" href="sobre.html">Sobre nós</a>
         </li>
         <li>
-          <a href="portfolio.html">Portfólio</a>
+          <a class="menu-principal__item" href="portfolio.html">Portfólio</a>
         </li>
         <li>
-          <a href="contato.html">Contato</a>
+          <a class="menu-principal__item" href="contato.html">Contato</a>
         </li>
       </ul>
     </nav>
@@ -33,8 +41,8 @@
   <main>
       <!-- Como nessa tela e um artigo eu uso a tag article e dentro dela vai ter um header e uma section -->
     <article>
-        <header>
-            <h1>Sobre nós</h1>
+        <header class="pagina-cabecalho">
+            <h1 class="pagina-cabecalho__titulo">Sobre nós</h1>
         </header>
         <section>
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
@@ -46,53 +54,55 @@
     </article>
   </main>
   <!-- Rodapé -->
-  <footer>
+  <footer class="rodape">
     <!-- Usando a div para separar conteudo sem semantica apenas para estilizar -->
-    <div>
-      <div>
-        <a href="index.html">Responsive Design</a>
+    <div class="rodape__linha-1">
+      <div class="rodape__coluna">
+        <a href="index.html" class="logo" role="logo">
+            <img src="../img/logotipo-branco.png" alt="Logotipo Responsive Design">
+        </a>
         <p>LoremId in deserunt tempor reprehenderit non laborum minim. Officia laboris
           ut sunt deserunt est nulla officia anim sunt officia qui. Aliquip culpa
           sunt reprehenderit Lorem eiusmod excepteur deserunt est officia ullamco
           qui aute. Magna deserunt elit aliqua dolor laboris.</p>
       </div>
-      <div>
-        <h2>Social</h2>
-        <ul>
+      <div class="rodape__coluna">
+        <h2 class="rodape__titulo">Social</h2>
+        <ul class="rodape__lista-links">
           <li>
-            <a target="_blank" href="https://twitter.com">Twitter</a>
+            <a class="rodape__lista-links__item" target="_blank" href="https://twitter.com">Twitter</a>
           </li>
           <li>
-            <a target="_blank" href="https://facebook.com">Facebook</a>
+            <a class="rodape__lista-links__item" target="_blank" href="https://facebook.com">Facebook</a>
           </li>
           <li>
-            <a target="_blank" href="https://instagram.com">Instagram</a>
+            <a class="rodape__lista-links__item" target="_blank" href="https://instagram.com">Instagram</a>
           </li>
           <li>
-            <a target="_blank" href="https://linkedin.com">Linkedin</a>
+            <a class="rodape__lista-links__item" target="_blank" href="https://linkedin.com">Linkedin</a>
           </li>
         </ul>
       </div>
-      <div>
-        <h2>Links</h2>
-        <ul>
+      <div class="rodape__coluna">
+        <h2 class="rodape__titulo">Links</h2>
+        <ul class="rodape__lista-links">
           <li>
-            <a href="index.html">Home</a>
+            <a class="rodape__lista-links__item" href="index.html">Home</a>
           </li>
           <li>
-            <a href="sobre.html">Sobre nós</a>
+            <a class="rodape__lista-links__item" href="sobre.html">Sobre nós</a>
           </li>
           <li>
-            <a href="portfolio.html">Portfólio</a>
+            <a class="rodape__lista-links__item" href="portfolio.html">Portfólio</a>
           </li>
           <li>
-            <a href="contato.html">Contato</a>
+            <a class="rodape__lista-links__item" href="contato.html">Contato</a>
           </li>
         </ul>
       </div>
     </div>
-    <div>
-      2018 - Todos os direitos reservados - Pedro Souza
+    <div class="rodape__linha-2">
+      &copy; 2018 - Todos os direitos reservados - Pedro Souza
     </div>
   </footer>
 </body>
