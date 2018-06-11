@@ -18,3 +18,17 @@
     margin: 0 auto;
     margin-top: 20px;
 }
+
+.pagina-conteudo {
+    padding: 25px 15px;
+}
+.pagina-conteudo p {
+    color: #3a3a3a;
+    line-height: 145%;
+    margin: 20px 0;
+}
+
+/* HELPERS */
+.text-center {
+    text-align: center;
+}

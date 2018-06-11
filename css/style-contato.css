@@ -1,0 +1,57 @@
+.formulario {
+    background-color: #efecec;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 40px 15px;
+    /* First value is the horizontal value */
+    /* Second value is the vertical value */
+    /* Third value is the blur value */
+    /* fourth value is the thickness value */
+    /* Inset value create a shadow inside of box, inset 0 3px 5px #989898 */
+    box-shadow: 0 3px 5px #989898;
+}
+.formulario__campo {
+    width: 100%;
+    border: 1px solid #c4c4c4;
+    border-radius: 5px;
+    padding: 10px 5px;
+}
+.formulario__grupo {
+    margin-bottom: 15px;
+}
+.formulario__label {
+    color: #343434;
+}
+.formulario__btn {
+    border: 3px solid #f00;
+    border-radius: 200px;
+    background-color: #fff;
+    color: #f00;
+    padding: 5px 20px;
+    cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+/* MAPA */
+.mapa {
+    background-color: grey;
+    /* I put the height 0, to component doesn't appear */
+    height: 0;
+    /* I put the padding-bottom 100%, because the div occupy 100% of box */
+    /* It doing that, the element appears responsive */
+    padding-bottom: 100%; 
+    position: relative;
+    overflow: hidden;
+    margin: 0 -15px -25px -15px;
+}
+.mapa iframe {
+    /* My map needed use position absolute because the class mapa has height 0 */
+    /* so my element need to stay absolute to parent element */
+    width: 100% !important;
+    height: 100% !important;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
