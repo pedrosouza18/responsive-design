@@ -7,6 +7,7 @@
   <title>Design Responsivo</title>
   <link rel="stylesheet" href="../css/normalize.css">
   <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/style-home.css">
 </head>
 
 <body>
@@ -37,34 +38,34 @@
   </header>
   <!-- Conteudo principal -->
   <main>
-    <header>
-      <h2>Texto Grande aqui!</h2>
-      <p>E um outro texto menor aqui</p>
-      <a href="#servicos">Role para ver mais</a>
+    <header class="cabecalho-home">
+      <h2 class="cabelaho-home__titulo">Texto Grande aqui!</h2>
+      <p class="cabelaho-home__subtitulo">E um outro texto menor aqui</p>
+      <a href="#servicos" class="cabelaho-home__role">Role para ver mais</a>
     </header>
     <!-- Seção de serviços -->
-    <section id="servicos">
-      <h2>O que fazemos</h2>
-      <section>
+    <section id="servicos" class="servicos">
+      <h2 class="home__titulo">O que fazemos</h2>
+      <section class="servico__item">
         <img src="../img/icone-desenvolvimento-web.png" alt="Ícone planeta terra">
         <h3>Desenvolvimento Web</h3>
-        <p>
+        <p class="servicos__texto">
           Aliquam vitae sem ligula. Aliquam a magna eget lacus lobortis rutrum quis elementum mauris. Quisque tincidunt ac diam in
           pellentesque. Proin in nisi congue, euismod magna ut, rutrum ex.
         </p>
       </section>
-      <section>
+      <section class="servico__item">
         <img src="../img/icone-carrinho-compras.png" alt="Ícone carrinho de compras">
         <h3>E-commerce</h3>
-        <p>
+        <p class="servicos__texto">
           Aliquam vitae sem ligula. Aliquam a magna eget lacus lobortis rutrum quis elementum mauris. Quisque tincidunt ac diam in
           pellentesque. Proin in nisi congue, euismod magna ut, rutrum ex.
         </p>
       </section>
-      <section>
+      <section class="servico__item">
         <img src="../img/icone-cafe.png" alt="Ícone xícara de café">
         <h3>Café</h3>
-        <p>
+        <p class="servicos__texto">
           Aliquam vitae sem ligula. Aliquam a magna eget lacus lobortis rutrum quis elementum mauris. Quisque tincidunt ac diam in
           pellentesque. Proin in nisi congue, euismod magna ut, rutrum ex.
         </p>
@@ -73,14 +74,14 @@
     <!-- Fim da seção de serviços -->
 
     <!-- Seção depoimentos -->
-    <section>
-      <h2>O que falam de nós</h2>
-      <article>
-        <img src="../img/depoimentos/pessoa-1.jpg" alt="Foto pessoa x">
-        <p>
+    <section class="depoimentos">
+      <h2 class="home__titulo home__titulo--branco">O que falam de nós</h2>
+      <article class="depoimentos__item">
+        <img class="depoimentos__img" src="../img/depoimentos/pessoa-1.jpg" alt="Foto pessoa x">
+        <p class="depoimentos__texto">
             Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Cras pellentesque facilisis dui at pulvinar.
         </p>
-        <p>Nome da pessoa</p>
+        <p class="depoimentos__pessoa">Nome da pessoa</p>
       </article>
     </section>
     <!-- Fim Seção depoimentos -->
