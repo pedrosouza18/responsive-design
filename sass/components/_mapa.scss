@@ -1,0 +1,21 @@
+.mapa {
+    background-color: grey;
+    /* I put the height 0, to component doesn't appear */
+    height: 0;
+    /* I put the padding-bottom 100%, because the div occupy 100% of box */
+    /* It doing that, the element appears responsive */
+    padding-bottom: 100%; 
+    position: relative;
+    overflow: hidden;
+    margin: 0 -15px -25px -15px;
+    
+    iframe {
+        /* My map needed use position absolute because the class mapa has height 0 */
+        /* so my element need to stay absolute to parent element */
+        width: 100% !important;
+        height: 100% !important;
+        position: absolute;
+        top: 0;
+        left: 0;
+    }
+}

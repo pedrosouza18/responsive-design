@@ -1,0 +1,131 @@
+/* BASE */
+* {
+    box-sizing: border-box;
+}
+
+img {
+    max-width: 100%;
+    height: auto
+}
+
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-Regular.otf');
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-Bold.otf');
+    font-weight: bold;
+}
+@font-face {
+    font-family: "Source Sans Pro";
+    src: url('../fonts/SourceSansPro-BoldIt.otf');
+    font-weight: bold;
+    font-style: italic;
+}
+
+html {
+    text-rendering: optimizeLegibility;
+}
+
+body {
+    font-family: "Source Sans Pro";
+}
+
+/* CABECALHO */
+.cabecalho {
+    background-color: #fff;
+    padding: 15px;
+}
+.logo {
+    height: 53px;
+    width: 120px;
+    display: block;
+}
+
+/* MENU */
+.menu-principal__btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -999em;
+    background-color: #fff;
+    background-image: url(../img/menuprincipal-btn-bg.png);
+    background-repeat: no-repeat;
+    background-position: -48px 7px;
+    border-color: #c4c4c4;
+    border-style: solid;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+
+    position: absolute;
+    top: 15px;
+    right: 15px;
+}
+.menu-principal__btn--fechar {
+    background-position: 5px 5px;
+}
+
+/* MENU LISTA */
+.menu-principal__lista {
+    /* Fazendo isso pois o ul tem um padding na lista */
+    padding: 0;
+    list-style: none;
+}
+.menu-principal__item {
+    text-decoration: none;
+    font-weight: bold;
+    color: #343434;
+    /* Tive que colocar display block pois os itens são inline, ai eu não consigo modificar as margens */
+    display: block;
+    margin-bottom: 10px;
+    font-size: 18px;
+}
+.menu-principal__item--atual {
+    color: #f44242;
+}
+
+/* RODAPE */
+.rodape {
+    color: #fff;
+}
+.rodape .logo {
+    margin-bottom: 20px;
+}
+.rodape__linha-1 {
+    background-color: #272525;
+    padding: 15px;
+    background-image: url('../img/rodape-bg.jpg');
+    background-size: cover;
+}
+.rodape__coluna {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.rodape__linha-2 {
+    background-color: #000;
+    text-align: center;
+    padding: 15px;
+}
+.rodape__titulo {
+    border-bottom: 1px solid #fff;
+    padding: 0 10px 10px 10px;
+    font-size: 18px;
+}
+.rodape__lista-links {
+    padding: 0;
+    list-style: none;
+}
+.rodape__lista-links__item {
+    color: #fff;
+    text-decoration: none;
+    /* For this space margin-bottom to function, we need use display: block */
+    display: block;
+    margin-bottom: 10px;
+}
+.rodape__lista-links__item::before {
+    content: '>';
+    margin-right: 8px;
+    color: #f44242;
+}

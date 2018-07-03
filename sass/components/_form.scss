@@ -1,0 +1,36 @@
+.formulario {
+    background-color: #efecec;
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 40px 15px;
+    /* First value is the horizontal value */
+    /* Second value is the vertical value */
+    /* Third value is the blur value */
+    /* fourth value is the thickness value */
+    /* Inset value create a shadow inside of box, inset 0 3px 5px #989898 */
+    box-shadow: 0 3px 5px #989898;
+
+    &__campo {
+        width: 100%;
+        border: 1px solid #c4c4c4;
+        border-radius: 5px;
+        padding: 10px 5px;
+    }
+    &__grupo {
+        margin-bottom: 15px;
+    }
+    &__label {
+        color: #343434;
+    }
+    &__btn {
+        border: 3px solid $cor-principal;
+        border-radius: 200px;
+        background-color: #fff;
+        color: $cor-principal;
+        padding: 5px 20px;
+        cursor: pointer;
+        display: block;
+        margin: 0 auto;
+        font-weight: bold;
+    }
+}
