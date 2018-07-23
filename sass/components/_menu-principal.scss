@@ -1,34 +1,45 @@
-.menu-principal__btn {
-    display: block;
-    width: 50px;
-    height: 50px;
-    text-indent: -999em;
-    background-color: #fff;
-    background-image: url(../img/menuprincipal-btn-bg.png);
-    background-repeat: no-repeat;
-    background-position: -48px 7px;
-    border-color: #c4c4c4;
-    border-style: solid;
-    border-radius: 5px;
-    outline: none;
-    cursor: pointer;
+.menu-principal {
 
-    position: absolute;
-    top: 15px;
-    right: 15px;
+    &__btn {
+        display: block;
+        width: 50px;
+        height: 50px;
+        text-indent: -999em;
+        background-color: #fff;
+        background-image: url(../img/menuprincipal-btn-bg.png);
+        background-repeat: no-repeat;
+        background-position: -48px 7px;
+        border-color: #c4c4c4;
+        border-style: solid;
+        border-radius: 5px;
+        outline: none;
+        cursor: pointer;
+    
+        position: absolute;
+        top: 15px;
+        right: 15px;
 
-    &--fechar {
-        background-position: 5px 5px;
+        @media (min-width: $breakpoint-md) {
+            display: none;
+        }
     }
-}
 
-/* MENU LISTA */
-.menu-principal__lista {
-    /* Fazendo isso pois o ul tem um padding na lista */
-    padding: 0;
-    list-style: none;
+    /* MENU LISTA */
+    &__lista {
+        /* Fazendo isso pois o ul tem um padding na lista */
+        padding: 0;
+        list-style: none;
+        transition: margin 200ms ease-out;
+        
+        @media (min-width: $breakpoint-md) {
+            li {
+                display: inline-block;
+                margin: 0 10px;
+            }
+        }
+    }
 
-    .menu-principal__item {
+    &__item {
         text-decoration: none;
         font-weight: bold;
         color: #343434;
@@ -36,9 +47,27 @@
         display: block;
         margin-bottom: 10px;
         font-size: 18px;
+        height: 20px;
+        transition: all 200ms ease-out;
 
         &--atual {
             color: $cor-principal;
+        }
+    }
+    @media (max-width: $breakpoint-md - 1) {
+        &--fechado {
+            .menu-principal__btn {
+                background-position: 5px 5px;
+            }
+            .menu-principal__lista {
+                margin: 0;
+            }
+            .menu-principal__item {
+                margin: 0;
+                height: 0;
+                // Usado para esconder os elementos que estão passando do tamanho do box
+                overflow: hidden;
+            }
         }
     }
 }

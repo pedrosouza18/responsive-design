@@ -4,6 +4,7 @@
     color: #fff;
     text-align: center;
     padding: 50px 0;
+    padding-top: 150px;
 
     &__titulo {
         font-size: 40px;
@@ -12,7 +13,12 @@
     &__role {
         display: none;
     }
+
+    @media (min-width: $breakpoint-lg) {
+        height: 100vh;
+    }
 }
+
 
 .home__titulo {
     text-align: center;

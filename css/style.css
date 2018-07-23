@@ -320,9 +320,39 @@ img {
 body {
   font-family: "Source Sans Pro"; }
 
+.container {
+  margin: 0 auto;
+  padding-left: 15px;
+  padding-right: 15px; }
+  @media (min-width: 576px) {
+    .container {
+      width: 540px; } }
+  @media (min-width: 768px) {
+    .container {
+      width: 720px; } }
+  @media (min-width: 992px) {
+    .container {
+      width: 960px; } }
+  @media (min-width: 1200px) {
+    .container {
+      width: 1140px; } }
+
 .cabecalho {
   background-color: #fff;
-  padding: 15px; }
+  padding: 15px;
+  position: fixed;
+  width: 100%; }
+  @media (min-width: 768px) {
+    .cabecalho {
+      min-height: 100px; }
+      .cabecalho .logo {
+        float: left;
+        margin-top: 8.5px; }
+      .cabecalho .menu-principal {
+        float: right;
+        margin-top: 12px; }
+        .cabecalho .menu-principal__lista {
+          margin-bottom: 0; } }
 
 .rodape {
   color: #fff; }
@@ -450,48 +480,66 @@ body {
     top: 0;
     left: 0; }
 
-.menu-principal__btn {
-  display: block;
-  width: 50px;
-  height: 50px;
-  text-indent: -999em;
-  background-color: #fff;
-  background-image: url(../img/menuprincipal-btn-bg.png);
-  background-repeat: no-repeat;
-  background-position: -48px 7px;
-  border-color: #c4c4c4;
-  border-style: solid;
-  border-radius: 5px;
-  outline: none;
-  cursor: pointer;
-  position: absolute;
-  top: 15px;
-  right: 15px; }
-  .menu-principal__btn--fechar {
-    background-position: 5px 5px; }
-
-/* MENU LISTA */
-.menu-principal__lista {
-  /* Fazendo isso pois o ul tem um padding na lista */
-  padding: 0;
-  list-style: none; }
-  .menu-principal__lista .menu-principal__item {
+.menu-principal {
+  /* MENU LISTA */ }
+  .menu-principal__btn {
+    display: block;
+    width: 50px;
+    height: 50px;
+    text-indent: -999em;
+    background-color: #fff;
+    background-image: url(../img/menuprincipal-btn-bg.png);
+    background-repeat: no-repeat;
+    background-position: -48px 7px;
+    border-color: #c4c4c4;
+    border-style: solid;
+    border-radius: 5px;
+    outline: none;
+    cursor: pointer;
+    position: absolute;
+    top: 15px;
+    right: 15px; }
+    @media (min-width: 768px) {
+      .menu-principal__btn {
+        display: none; } }
+  .menu-principal__lista {
+    /* Fazendo isso pois o ul tem um padding na lista */
+    padding: 0;
+    list-style: none;
+    transition: margin 200ms ease-out; }
+    @media (min-width: 768px) {
+      .menu-principal__lista li {
+        display: inline-block;
+        margin: 0 10px; } }
+  .menu-principal__item {
     text-decoration: none;
     font-weight: bold;
     color: #343434;
     /* Tive que colocar display block pois os itens são inline, ai eu não consigo modificar as margens */
     display: block;
     margin-bottom: 10px;
-    font-size: 18px; }
-    .menu-principal__lista .menu-principal__item--atual {
+    font-size: 18px;
+    height: 20px;
+    transition: all 200ms ease-out; }
+    .menu-principal__item--atual {
       color: #f44242; }
+  @media (max-width: 767px) {
+    .menu-principal--fechado .menu-principal__btn {
+      background-position: 5px 5px; }
+    .menu-principal--fechado .menu-principal__lista {
+      margin: 0; }
+    .menu-principal--fechado .menu-principal__item {
+      margin: 0;
+      height: 0;
+      overflow: hidden; } }
 
 .pagina-cabecalho {
   background-color: #f44242;
   color: #fff;
   padding: 40px 0;
   background-image: url("../img/cabecalho-pagina-bg.jpg");
-  background-attachment: fixed; }
+  background-attachment: fixed;
+  padding-top: 140px; }
   .pagina-cabecalho__titulo {
     text-align: center;
     text-transform: uppercase; }
@@ -512,11 +560,16 @@ body {
     margin: 20px 0; }
 
 .servicos {
-  padding: 30px 0; }
+  padding: 30px 0;
+  overflow: auto; }
   .servicos__item {
     text-align: center;
     padding: 0 15px;
     margin-bottom: 30px; }
+    @media (min-width: 768px) {
+      .servicos__item {
+        float: left;
+        width: 33.3333%; } }
   .servicos__texto {
     color: #3a3a3a; }
 
@@ -525,12 +578,16 @@ body {
   background-size: cover;
   color: #fff;
   text-align: center;
-  padding: 50px 0; }
+  padding: 50px 0;
+  padding-top: 150px; }
   .cabecalho-home__titulo {
     font-size: 40px;
     margin-bottom: 0; }
   .cabecalho-home__role {
     display: none; }
+  @media (min-width: 992px) {
+    .cabecalho-home {
+      height: 100vh; } }
 
 .home__titulo {
   text-align: center;
